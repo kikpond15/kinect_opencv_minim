@@ -9,9 +9,8 @@ import ddf.minim.*;
 
 Kinect kinect;
 OpenCV opencv;
-
-Minim minim;  //Minim型変数であるminimの宣言
-AudioPlayer player;  //サウンドデータ格納用の変数
+Minim minim;
+AudioPlayer player;
 FFT fft;
 
 PImage depthImg, dst;
@@ -38,7 +37,6 @@ void setup() {
   player = minim.loadFile("deep_moon.mp3");
   player.loop();
   fft = new FFT( player.bufferSize(), player.sampleRate());
-  
 }
 
 
@@ -74,19 +72,16 @@ void draw() {
     float sumY=0;
     int pointsNum = contour.getPolygonApproximation().numPoints();
     
-    
     for (PVector point : contour.getPolygonApproximation().getPoints()) {
       sumX += point.x;
       sumY += point.y;
     }
     PVector center = new PVector(sumX/pointsNum, sumY/pointsNum);
     
-    
     beginShape();
     stroke(map(count, 1, pointsNum, 1, 100), 100, 100);
     for(int i=0; i<pointsNum; i++){
-      PVector point = contour.getPolygonApproximation().getPoints().get(i);
-      
+      PVector point = contour.getPolygonApproximation().getPoints().get(i);    
       float angle = 360/pointsNum *i;
       float fftX = (fft.getBand(100+i)*30) * cos(radians(angle) );
       float fftY = (fft.getBand(100+i)*30) * sin(radians(angle) );
