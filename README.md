@@ -7,3 +7,5 @@ This repository is for for using the Microsoft Kinect sensor and OpenCV and Mini
 - [opencv_processing](https://github.com/atduskgreg/opencv-processing)
 - [Minim](https://github.com/ddf/Minim)
 
+# demo
+![demo](https://drive.google.com/file/d/1U3B64cIYVOxIIaI_-nQn-I-lhZlbtLs_/view?usp=sharing)
