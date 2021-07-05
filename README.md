@@ -1,6 +1,6 @@
 # kinect_opencv_minim
 
-This repository is for for using the Microsoft Kinect sensor and OpenCV and Minim sound library with Processing.
+This repository is for using the Microsoft Kinect sensor and OpenCV and Minim sound library with Processing.
 
 demo:https://vimeo.com/454713735
 
